@@ -1,6 +1,6 @@
 ﻿namespace Booking_System
 {
-    partial class frmSelectSeat
+    partial class FrmSelectSeats
     {
         /// <summary>
         /// Required designer variable.
@@ -36,13 +36,25 @@
             this.lblSeat2 = new System.Windows.Forms.Label();
             this.lblSeat3 = new System.Windows.Forms.Label();
             this.lblSeat4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
             this.cbxCol2 = new System.Windows.Forms.ComboBox();
             this.cbxRow2 = new System.Windows.Forms.ComboBox();
             this.cbxCol3 = new System.Windows.Forms.ComboBox();
             this.cbxRow3 = new System.Windows.Forms.ComboBox();
             this.cbxCol4 = new System.Windows.Forms.ComboBox();
             this.cbxRow4 = new System.Windows.Forms.ComboBox();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnCheck1 = new System.Windows.Forms.Button();
+            this.btnCheck2 = new System.Windows.Forms.Button();
+            this.btnCheck3 = new System.Windows.Forms.Button();
+            this.btnCheck4 = new System.Windows.Forms.Button();
+            this.lblAvailable1 = new System.Windows.Forms.Label();
+            this.lblAvailability = new System.Windows.Forms.Label();
+            this.lblAvailable2 = new System.Windows.Forms.Label();
+            this.lblAvailable3 = new System.Windows.Forms.Label();
+            this.lblAvailable4 = new System.Windows.Forms.Label();
+            this.btnCheckAll = new System.Windows.Forms.Button();
+            this.lblInstructions = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblSeat1
@@ -139,14 +151,15 @@
             this.lblSeat4.TabIndex = 11;
             this.lblSeat4.Text = "Select Seat 4:";
             // 
-            // button1
+            // btnNext
             // 
-            this.button1.Location = new System.Drawing.Point(218, 165);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Confirm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnNext.Location = new System.Drawing.Point(293, 201);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.TabIndex = 14;
+            this.btnNext.Text = "Next >";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // cbxCol2
             // 
@@ -268,18 +281,144 @@
             this.cbxRow4.Size = new System.Drawing.Size(47, 21);
             this.cbxRow4.TabIndex = 19;
             // 
-            // frmSelectSeat
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(11, 201);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 21;
+            this.btnBack.Text = "< Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnCheck1
+            // 
+            this.btnCheck1.Location = new System.Drawing.Point(223, 53);
+            this.btnCheck1.Name = "btnCheck1";
+            this.btnCheck1.Size = new System.Drawing.Size(75, 23);
+            this.btnCheck1.TabIndex = 22;
+            this.btnCheck1.Text = "Check";
+            this.btnCheck1.UseVisualStyleBackColor = true;
+            this.btnCheck1.Click += new System.EventHandler(this.btnCheck1_Click);
+            // 
+            // btnCheck2
+            // 
+            this.btnCheck2.Location = new System.Drawing.Point(223, 77);
+            this.btnCheck2.Name = "btnCheck2";
+            this.btnCheck2.Size = new System.Drawing.Size(75, 23);
+            this.btnCheck2.TabIndex = 23;
+            this.btnCheck2.Text = "Check";
+            this.btnCheck2.UseVisualStyleBackColor = true;
+            this.btnCheck2.Click += new System.EventHandler(this.btnCheck2_Click);
+            // 
+            // btnCheck3
+            // 
+            this.btnCheck3.Location = new System.Drawing.Point(223, 100);
+            this.btnCheck3.Name = "btnCheck3";
+            this.btnCheck3.Size = new System.Drawing.Size(75, 23);
+            this.btnCheck3.TabIndex = 24;
+            this.btnCheck3.Text = "Check";
+            this.btnCheck3.UseVisualStyleBackColor = true;
+            this.btnCheck3.Click += new System.EventHandler(this.btnCheck3_Click);
+            // 
+            // btnCheck4
+            // 
+            this.btnCheck4.Location = new System.Drawing.Point(223, 122);
+            this.btnCheck4.Name = "btnCheck4";
+            this.btnCheck4.Size = new System.Drawing.Size(75, 23);
+            this.btnCheck4.TabIndex = 25;
+            this.btnCheck4.Text = "Check";
+            this.btnCheck4.UseVisualStyleBackColor = true;
+            this.btnCheck4.Click += new System.EventHandler(this.btnCheck4_Click);
+            // 
+            // lblAvailable1
+            // 
+            this.lblAvailable1.AutoSize = true;
+            this.lblAvailable1.Location = new System.Drawing.Point(304, 53);
+            this.lblAvailable1.Name = "lblAvailable1";
+            this.lblAvailable1.Size = new System.Drawing.Size(10, 13);
+            this.lblAvailable1.TabIndex = 26;
+            this.lblAvailable1.Text = "-";
+            // 
+            // lblAvailability
+            // 
+            this.lblAvailability.AutoSize = true;
+            this.lblAvailability.Location = new System.Drawing.Point(305, 36);
+            this.lblAvailability.Name = "lblAvailability";
+            this.lblAvailability.Size = new System.Drawing.Size(56, 13);
+            this.lblAvailability.TabIndex = 27;
+            this.lblAvailability.Text = "Availability";
+            // 
+            // lblAvailable2
+            // 
+            this.lblAvailable2.AutoSize = true;
+            this.lblAvailable2.Location = new System.Drawing.Point(304, 77);
+            this.lblAvailable2.Name = "lblAvailable2";
+            this.lblAvailable2.Size = new System.Drawing.Size(10, 13);
+            this.lblAvailable2.TabIndex = 28;
+            this.lblAvailable2.Text = "-";
+            // 
+            // lblAvailable3
+            // 
+            this.lblAvailable3.AutoSize = true;
+            this.lblAvailable3.Location = new System.Drawing.Point(304, 100);
+            this.lblAvailable3.Name = "lblAvailable3";
+            this.lblAvailable3.Size = new System.Drawing.Size(10, 13);
+            this.lblAvailable3.TabIndex = 29;
+            this.lblAvailable3.Text = "-";
+            // 
+            // lblAvailable4
+            // 
+            this.lblAvailable4.AutoSize = true;
+            this.lblAvailable4.Location = new System.Drawing.Point(304, 122);
+            this.lblAvailable4.Name = "lblAvailable4";
+            this.lblAvailable4.Size = new System.Drawing.Size(10, 13);
+            this.lblAvailable4.TabIndex = 30;
+            this.lblAvailable4.Text = "-";
+            // 
+            // btnCheckAll
+            // 
+            this.btnCheckAll.Location = new System.Drawing.Point(223, 152);
+            this.btnCheckAll.Name = "btnCheckAll";
+            this.btnCheckAll.Size = new System.Drawing.Size(75, 23);
+            this.btnCheckAll.TabIndex = 31;
+            this.btnCheckAll.Text = "Check All";
+            this.btnCheckAll.UseVisualStyleBackColor = true;
+            this.btnCheckAll.Click += new System.EventHandler(this.btnCheckAll_Click);
+            // 
+            // lblInstructions
+            // 
+            this.lblInstructions.AutoSize = true;
+            this.lblInstructions.Location = new System.Drawing.Point(11, 13);
+            this.lblInstructions.Name = "lblInstructions";
+            this.lblInstructions.Size = new System.Drawing.Size(116, 13);
+            this.lblInstructions.TabIndex = 32;
+            this.lblInstructions.Text = "Please select 1-4 seats";
+            // 
+            // FrmSelectSeats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(305, 200);
+            this.ClientSize = new System.Drawing.Size(380, 236);
+            this.Controls.Add(this.lblInstructions);
+            this.Controls.Add(this.btnCheckAll);
+            this.Controls.Add(this.lblAvailable4);
+            this.Controls.Add(this.lblAvailable3);
+            this.Controls.Add(this.lblAvailable2);
+            this.Controls.Add(this.lblAvailability);
+            this.Controls.Add(this.lblAvailable1);
+            this.Controls.Add(this.btnCheck4);
+            this.Controls.Add(this.btnCheck3);
+            this.Controls.Add(this.btnCheck2);
+            this.Controls.Add(this.btnCheck1);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.cbxCol4);
             this.Controls.Add(this.cbxRow4);
             this.Controls.Add(this.cbxCol3);
             this.Controls.Add(this.cbxRow3);
             this.Controls.Add(this.cbxCol2);
             this.Controls.Add(this.cbxRow2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnNext);
             this.Controls.Add(this.lblSeat4);
             this.Controls.Add(this.lblSeat3);
             this.Controls.Add(this.lblSeat2);
@@ -288,7 +427,7 @@
             this.Controls.Add(this.lblCol);
             this.Controls.Add(this.lblRow);
             this.Controls.Add(this.lblSeat1);
-            this.Name = "frmSelectSeat";
+            this.Name = "FrmSelectSeats";
             this.Text = "Select Seats";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -305,12 +444,24 @@
         private System.Windows.Forms.Label lblSeat2;
         private System.Windows.Forms.Label lblSeat3;
         private System.Windows.Forms.Label lblSeat4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.ComboBox cbxCol2;
         private System.Windows.Forms.ComboBox cbxRow2;
         private System.Windows.Forms.ComboBox cbxCol3;
         private System.Windows.Forms.ComboBox cbxRow3;
         private System.Windows.Forms.ComboBox cbxCol4;
         private System.Windows.Forms.ComboBox cbxRow4;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnCheck1;
+        private System.Windows.Forms.Button btnCheck2;
+        private System.Windows.Forms.Button btnCheck3;
+        private System.Windows.Forms.Button btnCheck4;
+        private System.Windows.Forms.Label lblAvailable1;
+        private System.Windows.Forms.Label lblAvailability;
+        private System.Windows.Forms.Label lblAvailable2;
+        private System.Windows.Forms.Label lblAvailable3;
+        private System.Windows.Forms.Label lblAvailable4;
+        private System.Windows.Forms.Button btnCheckAll;
+        private System.Windows.Forms.Label lblInstructions;
     }
 }

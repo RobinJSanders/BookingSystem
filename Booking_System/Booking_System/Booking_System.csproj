@@ -45,25 +45,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmDetails.cs">
+    <Compile Include="FrmConfirmation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDetails.Designer.cs">
-      <DependentUpon>frmDetails.cs</DependentUpon>
+    <Compile Include="FrmConfirmation.Designer.cs">
+      <DependentUpon>FrmConfirmation.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSelectSeat.cs">
+    <Compile Include="Seat.cs" />
+    <Compile Include="FrmDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSelectSeat.Designer.cs">
-      <DependentUpon>frmSelectSeat.cs</DependentUpon>
+    <Compile Include="FrmDetails.Designer.cs">
+      <DependentUpon>FrmDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSelectSeats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelectSeats.Designer.cs">
+      <DependentUpon>FrmSelectSeats.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmDetails.resx">
-      <DependentUpon>frmDetails.cs</DependentUpon>
+    <Compile Include="Seats.cs" />
+    <Compile Include="User.cs" />
+    <EmbeddedResource Include="FrmConfirmation.resx">
+      <DependentUpon>FrmConfirmation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSelectSeat.resx">
-      <DependentUpon>frmSelectSeat.cs</DependentUpon>
+    <EmbeddedResource Include="FrmDetails.resx">
+      <DependentUpon>FrmDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSelectSeats.resx">
+      <DependentUpon>FrmSelectSeats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

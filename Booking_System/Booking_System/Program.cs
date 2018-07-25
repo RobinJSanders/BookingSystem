@@ -16,7 +16,10 @@ namespace Booking_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDetails());
+            Seats.Build();
+            Application.Run(new FrmDetails());
+
+
         }
     }
 }
